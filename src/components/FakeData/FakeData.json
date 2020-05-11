@@ -1,0 +1,38 @@
+[
+    {
+        "id": "1",
+        "name": "Teeth Orthodontics",
+        "time": "8.00 AM - 9.00 AM",
+        "seat": "10 SPACES AVAILABLE"
+    },
+    {
+        "id": "2",
+        "name": "Cosmetic Dentistry",
+        "time": "10.05 AM - 11.30 AM",
+        "seat": "15 SPACES AVAILABLE"
+    },
+    {
+        "id": "3",
+        "name": "Teeth Cleaning",
+        "time": "5.00 PM - 6.30 PM",
+        "seat": "11 SPACES AVAILABLE"
+    },
+    {
+        "id": "4",
+        "name": "Cavity Protection",
+        "time": "7.00 AM - 8.30 AM",
+        "seat": "13 SPACES AVAILABLE"
+    },
+    {
+        "id": "5",
+        "name": "Oral Implants",
+        "time": "8.00 AM - 9.00 AM",
+        "seat": "14 SPACES AVAILABLE"
+    },
+    {
+        "id": "6",
+        "name": "Tooth Implants",
+        "time": "8.00 PM - 9.00 PM",
+        "seat": "10 SPACES AVAILABLE"
+    }
+]

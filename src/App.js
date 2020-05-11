@@ -11,6 +11,7 @@ import {
 import Appoinment from './components/Appoinment/Appoinment';
 import AppointmentService from './components/AppintmentService/AppointmentService';
 import ScheduleForm from './components/ScheduleForm/ScheduleForm';
+import ImportFakeData from './components/ImportFakeData';
 
 function App() {
   const [newDate, setNewDate] = useState(new Date());
@@ -18,7 +19,6 @@ function App() {
   const currentDate = newDate.toDateString();
   const handleOnChange = (date) => {
     setNewDate(date);
-    // console.log("Clicked Hyse", date);
   }
 
   return (
@@ -36,6 +36,9 @@ function App() {
             </Route>
             <Route path= "/schedule">
               <ScheduleForm currentDate={currentDate}></ScheduleForm>
+            </Route>
+            <Route path="/fake">
+              <ImportFakeData></ImportFakeData>
             </Route>
           </Switch>
         </div>
