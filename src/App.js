@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import Header from './components/Header/Header';
 import Banner from './components/Banner/Banner';
@@ -10,8 +10,17 @@ import {
 } from "react-router-dom";
 import Appoinment from './components/Appoinment/Appoinment';
 import AppointmentService from './components/AppintmentService/AppointmentService';
+import ScheduleForm from './components/ScheduleForm/ScheduleForm';
 
 function App() {
+  const [newDate, setNewDate] = useState(new Date());
+  console.log("new", newDate.toDateString())
+  const currentDate = newDate.toDateString();
+  const handleOnChange = (date) => {
+    setNewDate(date);
+    // console.log("Clicked Hyse", date);
+  }
+
   return (
     <div>
       <Router>
@@ -22,8 +31,11 @@ function App() {
               <Banner></Banner>
             </Route>
             <Route path="/appointment">
-              <Appoinment></Appoinment>
-              <AppointmentService></AppointmentService>
+              <Appoinment handleOnChange={handleOnChange}></Appoinment>
+              <AppointmentService currentDate={currentDate} ></AppointmentService>
+            </Route>
+            <Route path= "/schedule">
+              <ScheduleForm currentDate={currentDate}></ScheduleForm>
             </Route>
           </Switch>
         </div>

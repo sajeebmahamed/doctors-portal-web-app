@@ -1,10 +1,12 @@
 import React from 'react';
 import { Container, Row, Col, Card, Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
-const AppointmentService = () => {
+const AppointmentService = (props) => {
+    console.log(props);
     return (
         <Container>
-                <h2>Available Appointment on Feb 7, 2020 </h2>
+            <h2>Available Appointment on {props.currentDate} </h2>
             <Row>
                 <Col md= {4}>
                     <Card style={{ width: '18rem' }}>
@@ -14,7 +16,9 @@ const AppointmentService = () => {
                             <Card.Text>
                                 10 SPACES AVAILABLE
                             </Card.Text>
-                            <Button variant="info">BOOK APPOINTMENT</Button>
+                            <Link to= "/schedule">
+                                <Button variant="info">BOOK APPOINTMENT</Button>
+                            </Link>
                         </Card.Body>
                     </Card>
                 </Col>
