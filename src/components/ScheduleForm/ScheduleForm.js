@@ -20,38 +20,28 @@ const ScheduleForm = (props) => {
     return (
         <Container>
             <Row>
-                <Col>
-                    <Modal.Dialog>
-                        <Modal.Header closeButton>
-                            <Modal.Title>Teeth Cleaning</Modal.Title>
-                        </Modal.Header>
+                <Col md = {12}>
+                    <div>
+                        <form className="ship-form" onSubmit={handleSubmit(onSubmit)}>
 
-                        <Modal.Body>
-                            <form className="ship-form" onSubmit={handleSubmit(onSubmit)}>
-                                
-                                <input name="time" defaultValue = "8.00 AM - 10.00 AM" ref={register({ required: true })} placeholder = "Select Time" />
-                                {errors.time && <span>This field is required</span>}
+                            <input name="time" defaultValue="8.00 AM - 10.00 AM" ref={register({ required: true })} placeholder="Select Time" />
+                            {errors.time && <span>This field is required</span>}
 
-                                <input name="name" ref={register({ required: true })} placeholder="Your Name" />
-                                {errors.name && <span>This field is required</span>}
+                            <input name="name" ref={register({ required: true })} placeholder="Your Name" />
+                            {errors.name && <span>This field is required</span>}
 
-                                <input name="phone" ref={register({ required: true })} placeholder="Phone Number" />
-                                {errors.phone && <span>This field is required</span>}
+                            <input name="phone" ref={register({ required: true })} placeholder="Phone Number" />
+                            {errors.phone && <span>This field is required</span>}
 
-                                <input name="email" ref={register({ required: true })} placeholder="Email" />
-                                {errors.email && <span>This field is required</span>}
+                            <input name="email" ref={register({ required: true })} placeholder="Email" />
+                            {errors.email && <span>This field is required</span>}
 
-                                <input name="date" defaultValue={props.currentDate} ref={register({ required: true })} placeholder="Select Date" />
-                                {errors.date && <span>This field is required</span>}
+                            <input name="date" defaultValue={props.currentDate} ref={register({ required: true })} placeholder="Select Date" />
+                            {errors.date && <span>This field is required</span>}
 
-                                <input type="submit" />
-                            </form>
-                        </Modal.Body>
-
-                        <Modal.Footer>
-                            <Button variant="primary">Send</Button>
-                        </Modal.Footer>
-                    </Modal.Dialog>
+                            <input type="submit" />
+                        </form>
+                    </div>
                 </Col>
             </Row>
         </Container>
