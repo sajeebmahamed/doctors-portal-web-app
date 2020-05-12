@@ -3,9 +3,10 @@ import { Container, Row, Col, Modal, Button } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
 import './ScheduleForm.css';
 const ScheduleForm = (props) => {
+    const {name, time} = props.service;
     const { register, handleSubmit, errors } = useForm();
     const onSubmit = data => {
-        fetch('http://localhost:4200/appointmentSchedule', {
+        fetch('https://doctors-portal-web-app.herokuapp.com/appointmentSchedule', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -23,8 +24,8 @@ const ScheduleForm = (props) => {
                 <Col md = {12}>
                     <div>
                         <form className="ship-form" onSubmit={handleSubmit(onSubmit)}>
-
-                            <input name="time" defaultValue="8.00 AM - 10.00 AM" ref={register({ required: true })} placeholder="Select Time" />
+                            <h3>{name}</h3>
+                            <input disabled name="time" defaultValue={time} ref={register({ required: true })} placeholder="Select Time" />
                             {errors.time && <span>This field is required</span>}
 
                             <input name="name" ref={register({ required: true })} placeholder="Your Name" />
@@ -36,8 +37,11 @@ const ScheduleForm = (props) => {
                             <input name="email" ref={register({ required: true })} placeholder="Email" />
                             {errors.email && <span>This field is required</span>}
 
-                            <input name="date" defaultValue={props.currentDate} ref={register({ required: true })} placeholder="Select Date" />
+                            <input disabled name="date" defaultValue={props.currentDate} ref={register({ required: true })} placeholder="Select Date" />
                             {errors.date && <span>This field is required</span>}
+
+                            <input disabled name="type" defaultValue={name} ref={register({ required: true })} placeholder="Appointment Type" />
+                            {errors.type && <span>This field is required</span>}
 
                             <input type="submit" />
                         </form>

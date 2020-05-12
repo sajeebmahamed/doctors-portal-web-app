@@ -5,22 +5,30 @@ import Banner from './components/Banner/Banner';
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
 import Appoinment from './components/Appoinment/Appoinment';
 import AppointmentService from './components/AppintmentService/AppointmentService';
 import ScheduleForm from './components/ScheduleForm/ScheduleForm';
 import ImportFakeData from './components/ImportFakeData';
 
-function App() {
+function App(props) {
+  //pass selected current calender date to schedule from start
   const [newDate, setNewDate] = useState(new Date());
   console.log("new", newDate.toDateString())
   const currentDate = newDate.toDateString();
   const handleOnChange = (date) => {
     setNewDate(date);
   }
+  //pass selected current calender date to schedule from start
 
+  //pass selected service to schedule form start
+  const [service, setService] = useState([]);
+  console.log(service);
+  const handleBookAppointment = (service) => {
+    setService(service);
+  }
+//pass selected service to schedule form end
   return (
     <div>
       <Router>
@@ -32,10 +40,10 @@ function App() {
             </Route>
             <Route path="/appointment">
               <Appoinment handleOnChange={handleOnChange}></Appoinment>
-              <AppointmentService currentDate={currentDate} ></AppointmentService>
+              <AppointmentService handleBookAppointment={handleBookAppointment} currentDate={currentDate} ></AppointmentService>
             </Route>
             <Route path= "/schedule">
-              <ScheduleForm currentDate={currentDate}></ScheduleForm>
+              <ScheduleForm service={service} currentDate={currentDate}></ScheduleForm>
             </Route>
             <Route path="/fake">
               <ImportFakeData></ImportFakeData>

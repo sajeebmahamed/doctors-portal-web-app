@@ -25,7 +25,7 @@ const AppointmentService = (props) => {
                                     <Card.Subtitle className="mb-2 text-muted"> {service.time} </Card.Subtitle>
                                     <Card.Text> {service.seat} </Card.Text>
                                     <Link to="/schedule">
-                                        <Button variant="info">BOOK APPOINTMENT</Button>
+                                        <Button onClick={() => props.handleBookAppointment(service)} variant="info">BOOK APPOINTMENT</Button>
                                     </Link>
                                 </Card.Body>
                             </Card>
