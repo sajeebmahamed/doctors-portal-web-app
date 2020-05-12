@@ -22,10 +22,10 @@ const ScheduleForm = (props) => {
         <Container>
             <Row>
                 <Col md = {12}>
-                    <div>
+                    <div className="main-form">
                         <form className="ship-form" onSubmit={handleSubmit(onSubmit)}>
                             <h3>{name}</h3>
-                            <input disabled name="time" defaultValue={time} ref={register({ required: true })} placeholder="Select Time" />
+                            <input disabled style={{ cursor:'not-allowed' }} name="time" defaultValue={time} ref={register({ required: true })} placeholder="Select Time" />
                             {errors.time && <span>This field is required</span>}
 
                             <input name="name" ref={register({ required: true })} placeholder="Your Name" />
@@ -37,13 +37,13 @@ const ScheduleForm = (props) => {
                             <input name="email" ref={register({ required: true })} placeholder="Email" />
                             {errors.email && <span>This field is required</span>}
 
-                            <input disabled name="date" defaultValue={props.currentDate} ref={register({ required: true })} placeholder="Select Date" />
+                            <input disabled style={{ cursor: 'not-allowed' }} name="date" defaultValue={props.currentDate} ref={register({ required: true })} placeholder="Select Date" />
                             {errors.date && <span>This field is required</span>}
 
-                            <input disabled name="type" defaultValue={name} ref={register({ required: true })} placeholder="Appointment Type" />
+                            <input disabled style={{ cursor: 'not-allowed' }} name="type" defaultValue={name} ref={register({ required: true })} placeholder="Appointment Type" />
                             {errors.type && <span>This field is required</span>}
 
-                            <input type="submit" />
+                            <input className="main-btn" type="submit" />
                         </form>
                     </div>
                 </Col>

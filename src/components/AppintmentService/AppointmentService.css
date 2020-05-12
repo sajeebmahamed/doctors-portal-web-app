@@ -1,0 +1,10 @@
+.main-card{
+    box-shadow: 5px 5px 10px lightgrey;
+    border: none !important;
+}
+.service-header{
+    text-align: center;
+    color: #1CC7C1;
+    font-size: 2rem;
+    padding: 35px 0px;
+}

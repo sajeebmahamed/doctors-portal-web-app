@@ -1,0 +1,12 @@
+.appointment-fluid{
+    height: 400px;
+    background: url(../../images/Mask\ Group\ 1.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.calender{
+    margin-top: 17%;
+    color: #1CC7C1;
+    border: none;
+}

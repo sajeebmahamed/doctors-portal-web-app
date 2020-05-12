@@ -1,0 +1,50 @@
+.banner-fluid{
+    height: 400px;
+    background: url(../../images/Mask\ Group\ 1.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.white-bg{
+    height: 600px;
+    background-color: #fff;
+    margin-left: -120px;
+    margin-right: -32px;
+    opacity: 0.8;
+}
+.black-bg{
+    height: 600px;
+    background-color: #3A4256;
+}
+.banner-info{
+    width: 60%;
+    margin: 136px auto;
+}
+.opening-hours, .location, .contact{
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 0 20px;
+    display: flex;
+}
+.opening-hours{
+    background-color: #1CC7C1;
+}
+.icon{
+    font-size: 3.5rem;
+    margin: 17px 14px;
+}
+.location{
+    background-color: #3A4256;
+}
+.contact{
+    background-color: #1CC7C1;
+}
+.opening-text{
+    margin-top: 20px;
+    margin-left: 30px;
+}
+.location-text{
+    margin-top: 20px;
+    margin-left: 5px;
+}

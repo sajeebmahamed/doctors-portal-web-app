@@ -4,5 +4,26 @@
     padding: 5px;
     border: 1px solid gray;
     border-radius: 5px;
-    width: 300px;
+    width: 100%;
+    /* background-color: #fff; */
+}
+.ship-form h3{
+    text-align: center;
+    color: #1CC7C1;
+    font-size: 1.5rem;
+}
+.main-form{
+    margin: 0 auto;
+    width: 50%;
+    background-color: gainsboro;
+    padding-bottom: 35px;
+    padding-top: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+    border-radius: 15px;
+}
+.main-btn{
+    background: linear-gradient(35deg,#19D3AE 0%, #0FCFEC 100%);
+    color: #fff;
+    border: none !important;
 }
