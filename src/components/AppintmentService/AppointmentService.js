@@ -17,7 +17,7 @@ const AppointmentService = (props) => {
             <h2 className="service-header">Available Appointment on {props.currentDate} </h2>
             <Row>
                 {
-                    serviceData.map(service =>
+                    serviceData.map(service => 
                         <Col md={4}>
                             <Card className = "main-card mb-5" style={{ width: '18rem' }}>
                                 <Card.Body style={{textAlign:'center'}}>

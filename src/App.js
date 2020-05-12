@@ -15,7 +15,7 @@ import ImportFakeData from './components/ImportFakeData';
 function App(props) {
   //pass selected current calender date to schedule from start
   const [newDate, setNewDate] = useState(new Date());
-  console.log("new", newDate.toDateString())
+  // console.log("new", newDate.toDateString())
   const currentDate = newDate.toDateString();
   const handleOnChange = (date) => {
     setNewDate(date);
@@ -24,7 +24,7 @@ function App(props) {
 
   //pass selected service to schedule form start
   const [service, setService] = useState([]);
-  console.log(service);
+  // console.log(service);
   const handleBookAppointment = (service) => {
     setService(service);
   }

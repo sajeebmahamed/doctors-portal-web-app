@@ -14,7 +14,7 @@ const Header = () => {
                                 <Nav.Link className="menu" href="#link">About</Nav.Link>
                                 <Nav.Link className="menu" href="#link">Dental Service</Nav.Link>
                                 <Nav.Link className="menu" href="#link">Reviews</Nav.Link>
-                                <Nav.Link className="menu" href="/fake">Blog</Nav.Link>
+                                <Nav.Link className="menu" href="#">Blog</Nav.Link>
                                 <Nav.Link className="menu" href="#link">Contact Us</Nav.Link>
                             </Nav>
                         </Navbar.Collapse>
