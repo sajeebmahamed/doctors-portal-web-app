@@ -1,0 +1,49 @@
+.item-app{
+    display: flex;
+}
+.pending-app, .location, .contact{
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 0 20px;
+    display: flex;
+}
+.pending-app{
+    background-color: #1CC7C1;
+}
+.pending-app h1,p{
+    padding: 0 10px;
+}
+.icon{
+    font-size: 3.5rem;
+    margin: 17px 14px;
+}
+.location{
+    background-color: #3A4256;
+}
+.contact{
+    background-color: #1CC7C1;
+}
+.opening-text{
+    margin-top: 20px;
+    margin-left: 30px;
+}
+.location-text{
+    margin-top: 20px;
+    margin-left: 5px;
+}
+.total-p{
+    margin-top: 12%;
+}
+.td-app{
+    background-color: #F1536E;
+}
+.tl-app{
+     background-color: #3DA5F4;
+}
+.pd-app{
+     background-color:  #00C689;
+}
+.t-p{
+     background-color:  #FDA006;
+}

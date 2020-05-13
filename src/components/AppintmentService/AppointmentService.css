@@ -8,3 +8,17 @@
     font-size: 2rem;
     padding: 35px 0px;
 }
+.s-table{
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    background: #fff;
+    padding: 40px 5px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 10px lightcoral;
+}
+.table-btn{
+    background: linear-gradient(35deg,#19D3AE 0%, #0FCFEC 100%);
+    color: #fff;
+    border: none !important;
+}

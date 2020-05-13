@@ -11,6 +11,8 @@ import Appoinment from './components/Appoinment/Appoinment';
 import AppointmentService from './components/AppintmentService/AppointmentService';
 import ScheduleForm from './components/ScheduleForm/ScheduleForm';
 import ImportFakeData from './components/ImportFakeData';
+import Dashboard from './components/dashboard/Dashboard';
+import AppointmentList from './components/dashboard/AppointmentList';
 
 function App(props) {
   //pass selected current calender date to schedule from start
@@ -44,6 +46,12 @@ function App(props) {
             </Route>
             <Route path= "/schedule">
               <ScheduleForm service={service} currentDate={currentDate}></ScheduleForm>
+            </Route>
+            <Route path="/dashboard">
+              <Dashboard></Dashboard>
+            </Route>
+            <Route path="/appoinmentlist">
+              <AppointmentList></AppointmentList>
             </Route>
             <Route path="/fake">
               <ImportFakeData></ImportFakeData>
