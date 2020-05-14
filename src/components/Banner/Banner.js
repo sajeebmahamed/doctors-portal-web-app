@@ -42,7 +42,7 @@ const Banner = () => {
                             </div>
                             <div className="location-text">
                                 <h6>Visit our location</h6>
-                                <p> <small>Brooklyn, NY 10036, United States</small></p>
+                                <p> <small>Brooklyn, NY 10036, US</small></p>
                             </div>
                         </div>
                     </Col>

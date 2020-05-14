@@ -1,49 +1,49 @@
 .item-app{
     display: flex;
 }
-.pending-app, .location, .contact{
+.item-app .pending-app, .location, .contact{
     color: #fff;
     padding: 20px;
     border-radius: 10px;
     margin: 0 20px;
     display: flex;
 }
-.pending-app{
+.item-app .pending-app{
     background-color: #1CC7C1;
 }
-.pending-app h1,p{
+.item-app .pending-app h1,p{
     padding: 0 10px;
 }
-.icon{
+.item-app .icon{
     font-size: 3.5rem;
     margin: 17px 14px;
 }
-.location{
+.item-app .location{
     background-color: #3A4256;
 }
-.contact{
+.item-app .contact{
     background-color: #1CC7C1;
 }
-.opening-text{
+.item-app .opening-text{
     margin-top: 20px;
     margin-left: 30px;
 }
-.location-text{
+.item-app .location-text{
     margin-top: 20px;
     margin-left: 5px;
 }
-.total-p{
+.item-app .total-p{
     margin-top: 12%;
 }
-.td-app{
+.item-app .td-app{
     background-color: #F1536E;
 }
-.tl-app{
+.item-app .tl-app{
      background-color: #3DA5F4;
 }
-.pd-app{
+.item-app .pd-app{
      background-color:  #00C689;
 }
-.t-p{
+.item-app .t-p{
      background-color:  #FDA006;
 }

@@ -28,7 +28,7 @@ const AppointmentsIItems = () => {
                         {date.toDateString()}
                 </Col>
                 <Col md={6}>
-                    <Table responsive="md">
+                    <Table responsive="md" className="s-table">
                         <thead>
                             <tr>
                                 <th>#</th>

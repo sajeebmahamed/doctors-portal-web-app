@@ -1,9 +1,14 @@
-import React, { Component, useState, useEffect } from 'react';
-import { Row, Col } from 'react-bootstrap';
+import React, { Component, useState, useEffect, createContext } from 'react';
+import { Row, Col, Modal } from 'react-bootstrap';
 import './DashboardItems.css'
-import { Button, Table } from '@material-ui/core';
-const DashboardItems = () => {
+import { Button, Table, Link } from '@material-ui/core';
+import Prescription from './Prescription';
+const DashboardItems = (props) => {
+    
+    // console.log(props);
     const [appointsDate, setAppointsDate] = useState([]);
+    const [signglePres, setSinglePres] = useState([]);
+    // console.log(signglePres);
     useEffect(() => {
         fetch('https://doctors-portal-web-app.herokuapp.com/appointments')
             .then(res => res.json())
@@ -11,6 +16,16 @@ const DashboardItems = () => {
                 setAppointsDate(data);
             })
     }, [])
+    //Prescription handle start
+    const handleMakePres = (finalDate) => {
+        setSinglePres(finalDate);
+        // window.location.pathname = "/pres"
+    }
+    //modal
+    const [show, setShow] = useState(false);
+
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
     return (
         <Row>
             <Col md={12}>
@@ -81,10 +96,12 @@ const DashboardItems = () => {
                                         <td> {finalDate.name} </td>
                                         <td> {finalDate.phone} </td>
                                         <td>
-                                            <Button className="table-btn" variant="info"> VIEW </Button>
+                                            <Button disabled href="/pres" onClick={() => handleMakePres(finalDate)} className="table-btn" variant="info">
+                                                MAKE
+                                            </Button>
                                         </td>
                                         <td>
-                                            <Button className="table-btn" variant="info"> NOT VISITED </Button>
+                                            <Button disabled className="table-btn" variant="info"> NOT VISITED </Button>
                                         </td>
                                     </tr>
                                 )
