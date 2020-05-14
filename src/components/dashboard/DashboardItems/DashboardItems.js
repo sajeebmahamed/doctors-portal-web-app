@@ -1,8 +1,7 @@
-import React, { Component, useState, useEffect, createContext } from 'react';
-import { Row, Col, Modal } from 'react-bootstrap';
+import React, {useState, useEffect} from 'react';
+import { Row, Col } from 'react-bootstrap';
 import './DashboardItems.css'
-import { Button, Table, Link } from '@material-ui/core';
-import Prescription from './Prescription';
+import { Button, Table } from '@material-ui/core';
 const DashboardItems = (props) => {
     
     // console.log(props);
@@ -21,11 +20,6 @@ const DashboardItems = (props) => {
         setSinglePres(finalDate);
         // window.location.pathname = "/pres"
     }
-    //modal
-    const [show, setShow] = useState(false);
-
-    const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
     return (
         <Row>
             <Col md={12}>

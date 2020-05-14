@@ -25,9 +25,10 @@ const AppointmentsIItems = () => {
                             calendarType = "Arabic"
                             
                         />
-                        {date.toDateString()}
+                        
                 </Col>
                 <Col md={6}>
+                    <h3>Appointments</h3> <h3>{date.toDateString()}</h3>
                     <Table responsive="md" className="s-table">
                         <thead>
                             <tr>

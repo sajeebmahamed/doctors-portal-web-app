@@ -3,7 +3,7 @@ import { Container, Row, Col, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import './Banner.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faClock, faMapMarkerAlt, faPhoneAlt } from '@fortawesome/free-solid-svg-icons'
+import { faClock, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons'
 
 const Banner = () => {
     return (

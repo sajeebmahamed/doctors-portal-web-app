@@ -13,9 +13,9 @@ import ScheduleForm from './components/ScheduleForm/ScheduleForm';
 import ImportFakeData from './components/ImportFakeData';
 import Dashboard from './components/dashboard/Dashboard';
 import AppointmentList from './components/dashboard/AppointmentList';
-import DashboardItems from './components/dashboard/DashboardItems/DashboardItems';
 import Prescription from './components/dashboard/DashboardItems/Prescription';
-import PresProvider from './components/dashboard/DashboardItems/DashboardItems'
+import NotFound from './components/NoFound/NotFound';
+
 
 function App(props) {
   //pass selected current calender date to schedule from start
@@ -62,6 +62,9 @@ function App(props) {
             </Route>
             <Route path="/pres">
               <Prescription ></Prescription>
+            </Route>
+            <Route path="*">
+              <NotFound></NotFound>
             </Route>
           </Switch>
         </div>

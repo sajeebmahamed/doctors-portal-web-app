@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import { Container, Button, Modal, Input } from '@material-ui/core';
-import { Row, Col, Table, Form } from 'react-bootstrap';
+import React from 'react';
+import { Container} from '@material-ui/core';
+import { Row, Col} from 'react-bootstrap';
 
 const Prescription = (props) => {
     console.log(props);
