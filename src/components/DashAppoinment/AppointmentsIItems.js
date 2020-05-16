@@ -40,9 +40,9 @@ const AppointmentsIItems = () => {
                         </thead>
                         <tbody>
                             {
-                                appointsDate.map(finalDate =>
+                                appointsDate.map((finalDate,i) =>
                                     <tr>
-                                        <td>1</td>
+                                        <td> {i+1} </td>
                                         <td> {finalDate.name} </td>
                                         <td> {finalDate.time} </td>
                                         <td> 

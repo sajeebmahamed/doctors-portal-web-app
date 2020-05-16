@@ -2,12 +2,11 @@ import React, {useState, useEffect} from 'react';
 import { Row, Col } from 'react-bootstrap';
 import './DashboardItems.css'
 import { Button, Table } from '@material-ui/core';
+import Prescription from '../Prescription/Prescription';
 const DashboardItems = (props) => {
-    
-    // console.log(props);
     const [appointsDate, setAppointsDate] = useState([]);
     const [signglePres, setSinglePres] = useState([]);
-    // console.log(signglePres);
+    console.log(signglePres);
     useEffect(() => {
         fetch('https://doctors-portal-web-app.herokuapp.com/appointments')
             .then(res => res.json())
@@ -20,6 +19,7 @@ const DashboardItems = (props) => {
         setSinglePres(finalDate);
         // window.location.pathname = "/pres"
     }
+
     return (
         <Row>
             <Col md={12}>
@@ -81,17 +81,16 @@ const DashboardItems = (props) => {
                         </thead>
                         <tbody>
                             {
-                                appointsDate.map(finalDate =>
-                                    
-                                    <tr>
-                                        <td> 1 </td>
+                                appointsDate.map((finalDate,i) =>
+                                    <tr key={finalDate._id}>
+                                        <td> {i+1} </td>
                                         <td> {finalDate.date} </td>
                                         <td> {finalDate.time} </td>
                                         <td> {finalDate.name} </td>
                                         <td> {finalDate.phone} </td>
                                         <td>
-                                            <Button disabled href="/pres" onClick={() => handleMakePres(finalDate)} className="table-btn" variant="info">
-                                                MAKE
+                                            <Button disabled onClick={() => handleMakePres(finalDate)} className="table-btn" variant="info">
+                                               MAKE
                                             </Button>
                                         </td>
                                         <td>

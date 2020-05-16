@@ -10,13 +10,10 @@ import {
 import Appoinment from './components/Appoinment/Appoinment';
 import AppointmentService from './components/AppintmentService/AppointmentService';
 import ScheduleForm from './components/ScheduleForm/ScheduleForm';
-import ImportFakeData from './components/ImportFakeData';
 import Dashboard from './components/dashboard/Dashboard';
-import AppointmentList from './components/dashboard/AppointmentList';
-import Prescription from './components/dashboard/DashboardItems/Prescription';
 import NotFound from './components/NoFound/NotFound';
-
-
+import AppointmentList from './components/DashAppoinment/AppointmentList';
+import Prescription from './components/Prescription/Prescription';
 function App(props) {
   //pass selected current calender date to schedule from start
   const [newDate, setNewDate] = useState(new Date());
@@ -34,7 +31,7 @@ function App(props) {
     setService(service);
   }
 //pass selected service to schedule form end
-
+  
   return (
     <div>
       <Router>
@@ -57,11 +54,8 @@ function App(props) {
             <Route path="/appoinmentlist">
               <AppointmentList></AppointmentList>
             </Route>
-            <Route path="/fake">
-              <ImportFakeData></ImportFakeData>
-            </Route>
-            <Route path="/pres">
-              <Prescription ></Prescription>
+            <Route path="/prescription">
+              <Prescription></Prescription>
             </Route>
             <Route path="*">
               <NotFound></NotFound>
